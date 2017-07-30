@@ -1,16 +1,16 @@
 {
-  "name": "burger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "homework week 15 Eat-da-burger",
-  "main": "index.js",
+  "description": "Sequelized version of homework week 15 Eat-da-burger",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcrigler/burger.git"
+    "url": "git+https://github.com/mcrigler/sequelizeBurger.git"
   },
-   "keywords": [
+  "keywords": [
     "Node.js",
     "Express.js",
     "MySQL",
@@ -19,14 +19,19 @@
   "author": "marya crigler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mcrigler/burger/issues"
+    "url": "https://github.com/mcrigler/sequelizeBurger/issues"
   },
-  "homepage": "https://github.com/mcrigler/burger#readme",
+  "homepage": "https://github.com/mcrigler/sequelizeBurger#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
-    "mysql": "^2.14.0"
+    "mysql": "^2.14.0",
+    "mysql2": "^1.3.6",
+    "sequelize": "^4.4.2"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
   }
 }

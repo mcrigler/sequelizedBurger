@@ -1,4 +1,4 @@
-# Eat Da Burger!
+# Eat Da Burger!  Sequelized Edition.
 Homework Week 15 - Eat-da-burger
 
 ## Description
@@ -10,7 +10,7 @@ Homework Week 15 - Eat-da-burger
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
 
-This application demonstrates a simple full stack application featuring the use of Node, Express server, MySQL and HTML templating using Handlebars.
+This application demonstrates a simple full stack application featuring the use of Node, Express server, MySQL, HTML templating using Handlebars, and Sequelize.
 
 
 ## Demo

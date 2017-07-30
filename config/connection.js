@@ -1,29 +1,27 @@
-// Set up database 
-var mysql = require('mysql');
-var connection;
+// Require dependencies
+var Sequelize = require('sequelize');
 
-// JAWSDB for heroku
-if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+// Set the environment to the JawsDB 
+var env;
+if (process.env.JAWSDB_URL)
+    env = "production";
+else {
+    env = 'development';
+}
+
+
+// Set connection (sequelize) 
+var config = require('./config')[env];
+var sequelize;
+if (config.use_env_variable) {
+	sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
-	connection = mysql.createConnection({
-		host: 'localhost',
-		port:3306,
-		user: 'root',
-		password: 'Snoopy123',
-		database: 'burgers_db'
+	sequelize = new Sequelize(config.database, config.username, config.password, {
+		host: config.host,
+		dialect: config.dialect
 	});
-};
+}
 
-
-// Connect database
-connection.connect(function(err) {
-	if (err) {
-		console.error('There was an error conencting: ' + err.stack + '\n');
-		return;
-	}
-	console.log('You are connected as id ' + connection.threadId + '\n');
-});
-
-// export the connection back to orm
-module.exports = connection;
+// Export connection
+module.exports = sequelize;
