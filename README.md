@@ -17,7 +17,7 @@ This application demonstrates a simple full stack application featuring the use 
 
 ![Example Home page](/public/assets/images/demo1.png)
 
-The demo of Eat Da Burger! can be found [here](https://fathomless-fjord-14133.herokuapp.com/).
+The demo of Eat Da Burger! can be found [here](https://fast-coast-89760.herokuapp.com/).
 
 
 
